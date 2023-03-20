@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tt2.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename ='img/hfevicon.png') }}" type="image/x-icon">
+    <title>Happy harmones</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="/"><img src="{{ url_for('static', filename ='img/hlogo.png') }}" alt="img"></a>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/login.html">LOGIN</a></li>
+                    <li><a href="/contact.html">CONTACT US</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="data">
+         <img src="{{ url_for('static', filename ='img/welcome.gif') }}" alt="bg">
+        
+            <h5>So, here you are! Please Welcome!!
+                <br>
+                We are ready to help you :)
+            </h5>
+    </div>
+
+    <div class="moderate">
+        <img src="{{ url_for('static', filename ='img/med.png') }}" alt="Moderate stress">
+        <h5>We analyze that you have moderate stress level.
+            <br>
+            So we want to give you some tips & doctors suggestions near you so they can help you to feel relax and comfortable.
+            <br>
+            Please check this out &darr;
+        </h5>
+    </div>
+
+    <div class="tip">
+        <header>
+            &rarr; &diams; TIPS &diams; &larr;
+        </header>
+        <div class="list">
+            <h4><u> STEPS TO REDUCE STRESS:-</u></h4>
+            1.Sit or lie down in a comfortable place.
+            <br>
+            2.Bring your awareness to your breaths without trying to change how you’re breathing.
+            <br>
+            3.Alternate between normal and deep breaths a few times. Notice any differences between normal breathing and deep breathing. Notice how your abdomen expands with deep inhalations.
+            <br>
+            4.Note how shallow breathing feels compared to deep breathing.
+            <br>
+            5.Practice your deep breathing for a few minutes.
+            <br>
+            6.Place one hand below your belly button, keeping your belly relaxed, and notice how it rises with each inhale and falls with each exhale.
+            <br>
+            7.Let out a loud sigh with each exhale.
+            <br>
+            8.Begin the practice of breath focus by combining this deep breathing with imagery and a focus word or phrase that will support relaxation.
+            <br>
+            9.You can imagine that the air you inhale brings waves of peace and calm throughout your body. Mentally say, “Inhaling peace and calm.”
+            <br>
+            10.Imagine that the air you exhale washes away tension and anxiety. You can say to yourself, “Exhaling tension and anxiety.”
+            <br>
+        </div>
+    </div>
+
+    <div class="suggestion">
+        <header>&rarr; &diams; SUGGETIONS &diams; &larr;</header>
+        <div class="flex">
+            {% for key,value in data.iterrows()  %}
+            <div class="block1" >
+                &rarr; &larr; &rarr; &larr; &rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr;
+                <br>
+                <a href="{{value['profile_link']}}">{{value['doc_name']}}</a>
+                <br>
+                {{value['year_of_exp']}} Years Experience Overall
+                
+                <br>
+                {{value['locality']}} 
+                <br>
+                {{value['consulting_fee']}} Consultation fees at Clinic 
+                <br>
+                {{value['patient_stories']}} Patient stories
+                <br>
+                {{value['doc_recommmendation']}} Rating 
+                <br>
+                &rarr; &larr; &rarr; &larr; &rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr; &larr;&rarr;
+            </div>
+            {% endfor %}
+        </div>
+        <div class="para">
+            &hearts;  STAY HAPPY AND KEEP SMILING ALWAYS!! HAVE A GOOD DAY!!  &hearts;
+         </div>
+        
+    </div>
+
+
+    <footer class="footer">
+        <p> Copyright &copy;</p>
+
+    </footer>
+    <q id="time"></q>
+    <script>
+        function time() {
+            time = new Date()
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(time, 1000)
+    </script>
+</body>
+</html>
+
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa',cursive;
+
+    font-size: 18px;
+    /* font-weight: ; */
+    color: #513131;
+}
+body{
+    background-color: #ffe9fd;
+}
+
+ h3{
+    color:#e018ae;
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    font-family: 'Poppins',;
+    /* position: relative;
+    /* left: 700px;
+    bottom: 30px; */ 
+    font-size: 24px;
+}
+.logo{
+    display: flex;
+   width: 20px;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 3vh;
+    z-index: 10000;
+}
+nav img{
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px black;
+    position: relative;
+    top: 10px;
+}
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navlinks ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color:red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    border: 2px ;
+    background-color: thistle;
+}
+#time{
+    text-align: center;
+    /* background-color: white; */
+    color: black;
+    background-color: antiquewhite;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+}
+.data img{
+    height: 200px;
+    width: 350px;
+}
+.data{
+    display: inline-flex;
+    margin: 55px;
+    padding: 20px;
+    background-color: aquamarine;
+    height: 220px;
+    width: 1100px;
+    justify-content: space-evenly;
+}
+.moderate{
+    display: inline-flex;
+    margin: 55px;
+    padding: 20px;
+    justify-content: space-evenly;
+    background-color: beige;
+
+}
+.moderate img{
+    height: 200px;
+    width: 350px;
+    margin: 20px;
+    padding: 35px;
+}
+h5{
+    padding: 67px;
+    margin: -9px;
+    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: 0.017em;
+}
+.suggestion header{
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.4;
+    letter-spacing: 0.095em;
+    background-color: darksalmon;
+}
+.tip{
+    background-color: bisque;
+}
+.flex{
+    display: flex;
+    margin: 15px;
+    padding: 10px;
+   
+}
+.block1{
+    height: 220px;
+    width: 333px;
+    background-color: darkcyan;
+    margin: 12px;
+    padding: 10px;
+    color: aliceblue;
+    font-style: italic;
+}
+.block2{
+    height: 220px;
+    width: 333px;
+    background-color:darkgoldenrod;
+    margin: 12px;
+    padding: 10px;
+    color: aliceblue;
+    font-style: italic;
+}
+.block3{
+    height: 220px;
+    width: 333px;
+    background-color:indianred;
+    margin: 12px;
+    padding: 10px;
+    color: aliceblue;
+    font-style: italic;
+}
+.block4{
+    height: 220px;
+    width: 333px;
+    background-color:darkkhaki;
+    margin: 12px;
+    padding: 10px;
+    color: aliceblue;
+    font-style: italic;
+}
+.para{
+    text-align: center;
+    margin: 22px;
+    padding: 10px;
+    background-color: turquoise;
+    font-size: 32px;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    font-style: italic;
+}
+.tip header{
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.4;
+    letter-spacing: 0.095em;
+    background-color: darksalmon;
+}
+.list{
+    font-size: 19px;
+    line-height: 1.7;
+    letter-spacing: -0.004em;
+    font-weight: 500;
+    font-style: italic;
+    padding: 10px;
+    margin: 15px;
+}
+.tip .list  h4 u{
+    color: darkred;
+    line-height: 46px;
+    font-size: 23px;
+    letter-spacing: 0.2px;
+    line-height: 60px;
+}
+</style>

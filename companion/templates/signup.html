@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename ='img/hfevicon.png') }}" type="image/x-icon">
+    <title>Happy Hormones- LOGIN</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="i/"><img src="{{ url_for('static', filename ='img/hlogo.png') }}" alt="img"></a>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="taketest.html">TAKE THE TEST</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    
+    <div class="container" id="content01">
+        <div class="img-slider"> 
+            <h2>HELLO SUNSHINE</h2>
+            <p>WE'RE HERE TO HELP YOU</p>
+                <img src="{{ url_for('static', filename ='img/hiibrain.jpg') }}" alt="MentalHealth">
+        </div>
+        <div class="content">
+            <h2>Get Started</h2>
+            <p>Already have an account ? <a href="login.html" class="item" id="login">Sign In </a></p>
+            <main>
+            <form id="form">
+                <label for="name" id="nlabel">Name</label> <br>
+                <input type="text" id="fname" placeholder="Sakshi Rasal" autocomplete="off"> <br>
+                <label for="email" id="elabel">Email</label> <br>
+                <input type="email" id="eemail" placeholder="sakshirasal28@gmail.com" autocomplete="off"> <br>
+                <label for="password" id="plabel">Password</label> <br>
+                <input type="password" name="password" id="lpassword" placeholder="sakshi@123"> <br>
+                <button type="submit" onclick="UserRegister()" id="btn">Sign Up </button>
+            </form>
+        </main>
+        </div>
+        </div>
+    
+    <footer class="footer">
+        Copyright &copy;
+
+    </footer>
+    <q id="time"></q>
+    <script>
+        function time() {
+            time = new Date()
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(time, 1000)
+    </script>
+
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa',cursive;
+
+    font-size: 18px;
+    /* font-weight: ; */
+    color: #513131;
+}
+body{
+    background-color: #ffe9fd;
+}
+img{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: center;
+    align-content: flex-end;
+}
+h3{
+    color:#e018ae;
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    font-family: 'Poppins',;
+    /* position: relative;
+    /* left: 700px;
+    bottom: 30px; */ 
+    font-size: 24px;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+.logo{
+    display: flex;
+   width: 20px;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 3vh;
+    z-index: 10000;
+}
+nav img{
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px black;
+    position: relative;
+    top: 10px;
+}
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navlinks ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(231, 13, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.container {
+    width: 800px;
+    height: 450px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    border-radius: 20px;
+}
+
+.img-slider {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    /* border-right: 2px solid #f; */
+    border-radius: 20px;
+    /* border: 1px solid #000; */
+    background-color: #f8c4c4;
+}
+
+.img-slider h2 {
+    position: relative;
+    top: 20px;
+    /* left: 50px; */
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2rem;
+}
+
+.img-slider p {
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 5px;
+    font-family: 'Nova Flat', cursive;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(122, 122, 122);
+}
+
+.container .img-slider img {
+    position: relative;
+    width: 70%;
+    margin-top: 80px;
+    left: 50px;
+    border-radius: 20%;
+}
+
+.content {
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    /* text-align: center; */
+}
+
+.content h2 {
+    
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Lexend', sans-serif;
+    padding: 20px 0px 10px 180px;
+}
+
+.content p {
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    padding: 10px 0px 10px 170px;
+    color: rgb(150, 148, 148);
+
+}
+
+.content p a {
+    text-decoration: none;
+    color: #f88e8e;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    border: none;
+}
+
+#form {
+    padding: 10px 0px 0px 200px;
+}
+
+#form label {
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 10px 0px;
+    color: #6e706e;
+}
+
+#form input {
+    border: none;
+    border-bottom: 3px solid #A83131;
+    width: 350px;
+    margin: 10px 0px;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px 0px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+#btn {
+    text-align: center;
+    padding: 10px 60px;
+    position: relative;
+    left: 80px;
+    color: #fff;
+    background-color: #ffadad;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Comfortaa', cursive;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    border: 2px solid white;
+    position: relative;
+    top: 700px;
+}
+#time{
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    position: relative;
+    top: 700px;
+}
+
+</style>

@@ -1,0 +1,141 @@
+body {
+    background-color: lightslategray;
+    text-align: center;
+    padding: 0px;
+}
+
+.queoptions {
+    background-color: pink;
+    top: 61px;
+    position: sticky;
+    text-align: center;
+    padding: 25px;
+    z-index: 1000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    color: #513131;
+}
+
+body {
+    background-color: #ffe9fd;
+}
+
+h3 {
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    font-family: 'Poppins', ;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    border: 2px;
+}
+
+#time {
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 0vh;
+}
+
+nav img {
+    width: 150px;
+    /* height: 100px; */
+    border-radius: 50%;
+    border: 2px black;
+}
+
+.navlinks {
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navlinks ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(231, 13, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+#first {
+    border-radius: 11px;
+    height: 33px;
+    font-size: 20px;
+    position: relative;
+    width: 200px;
+    left: 130px;
+    top: 20px;
+    border-bottom: 3px solid #ffadad;
+    outline: pink;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+div h3 {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 500px;
+    background: -webkit-linear-gradient(left, rgb(255, 255, 255), pink);
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    left: 535px;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examine</title>
+</head>
+<link rel="stylesheet" href="/swaggy.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="/"><img src="{{ url_for('static', filename ='img/hlogo.png') }}" alt="img"></a>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="taketest.html">TAKE THE TEST</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.php">LOGIN</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="queoptions">
+        <ul>
+
+            <li>0.Did not apply to me at all </li>
+            <li>1.Applied to me to some degree, or some of the time</li>
+            <li>2.Applied to me to a considerable degree, or a good part of time</li>
+            <li>3.Applied to me very much, or most of the time</ul>
+
+    </div>
+
+
+    <div>
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Mental Health Examine</h1>
+
+            <h3 data-aos="fade-left">I found it hard to wind down
+                <input id="first" name="wind_down" type="number "></h3><br>
+
+            <h3 data-aos="fade-right">I was aware of dryness of my mouth
+                <input id="first" name="dryness_mouth" required="required" type="number "></h3><br>
+
+
+            <h3 data-aos="fade-left">I couldn't seem to experience any positive feeling at all
+                <input id="first" name="no_positive_feeling" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-right">I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion)
+                <input id="first" name="breathing_difficulty" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I found it difficult to work up the initiative to do things
+                <input id="first" name="difficult_to_work" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I tended to over-react to situations
+                <input id="first" name="over_react" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I experienced trembling (eg, in the hands)
+                <input id="first" name="trembling" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I felt that I was using a lot of nervous energy
+                <input id="first" name="use_nervous_energy" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I was worried about situations in which I might panic and make a fool of myself
+                <input id="first" name="panic" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I felt that I had nothing to look forward to
+                <input id="first" name="nothing_look_forward" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I found myself getting agitated
+                <input id="first" name="agitated" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I found it difficult to relax
+                <input id="first" name="difficult_relax" required="required" type="number "></h3><br>
+
+
+            <h3 data-aos="fade-down">I felt down-hearted and blue
+                <input id="first" name="blue" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I was intolerant of anything that kept me from getting on with what I was doing
+                <input id="first" name="intolerant" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I felt I was close to panic
+                <input id="first" name="close_panic" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I was unable to become enthusiastic about anything
+                <input id="first" name="unable_enthusiatic" required="required" type="number"></h3><br>
+            <h3 data-aos="fade-down">I felt I wasn't worth much as a person
+                <input id="first" name="not_worth_person" required="required" type="number "></h3><br>
+
+            <h3 data-aos="fade-down">I felt that I was rather touchy
+                <input id="first" name="touchy" required="required" type="number "></h3><br></h3><br>
+
+            <h3 data-aos="fade-down">I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat)
+                <input id="first" name="action_of_heart_abs" required="required" type="number "></h3><br>
+
+            <h3>I felt scared without any good reason
+                <input id="first" name="scared_no_reason" required="required" type="number "></h3><br>
+
+            <h3>I felt that life was meaningless
+                <input id="first" name="life_meaningless" required="required" type="number "></h3><br>
+
+            </br>
+            <br data-aos="fade-down"><br><button id="sub" type="submit " onclick="output()">I'm Done</button>
+
+            <br>
+
+        </form>
+
+        <br><br>
+        <!--<h3>{{ prediction_text }}
+            <h3>!-->
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+<style>
+    body {
+    background-color: lightslategray;
+    text-align: center;
+    padding: 0px;
+}
+
+.queoptions {
+    background-color: pink;
+    top: 61px;
+    position: sticky;
+    text-align: center;
+    padding: 25px;
+    z-index: 1000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    color: #513131;
+}
+
+body {
+    background-color: #ffe9fd;
+}
+
+h3 {
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    font-family: 'Poppins', ;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    border: 2px;
+}
+
+#time {
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 0vh;
+}
+
+nav img {
+    width: 150px;
+    /* height: 100px; */
+    border-radius: 50%;
+    border: 2px black;
+}
+
+.navlinks {
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navlinks ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(231, 13, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after {
+    width: 100%;
+}
+
+#first {
+    border-radius: 11px;
+    height: 33px;
+    font-size: 20px;
+    position: relative;
+    width: 200px;
+    left: 130px;
+    top: 20px;
+    border-bottom: 3px solid #ffadad;
+    outline: pink;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+div h3 {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 500px;
+    background: -webkit-linear-gradient(left, rgb(255, 255, 255), pink);
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    left: 535px;
+}
+</style>

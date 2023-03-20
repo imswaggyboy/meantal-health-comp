@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename ='img/hfevicon.png') }}" type="image/x-icon">
+    <title>Happy Hormones</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="/"><img src="{{ url_for('static', filename ='img/hlogo.png') }}" alt="img"></a>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="taketest.html">TAKE THE TEST</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <main>
+        <br><br>
+        <div class="box1">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/5483/5483333.png" alt="MentalHealth" width="300px" height="250px"> <br>
+            <div class="para1">
+                <h3>OVERVIEW</h3><br>
+                <p>Mental illness, also called mental health disorders, refers to a wide range of mental health
+                    conditions — disorders that affect your mood, thinking and behavior. Examples of mental illness
+                    include depression, anxiety disorders, schizophrenia, eating disorders and addictive behaviors.
+
+                    Many people have mental health concerns from time to time. But a mental health concern becomes a
+                    mental illness when ongoing signs and symptoms cause frequent stress and affect your ability to
+                    function.
+
+                    A mental illness can make you miserable and can cause problems in your daily life, such as at school
+                    or work or in relationships. In most cases, symptoms can be managed with a combination of
+                    medications and talk therapy (psychotherapy)</p>
+            </div>
+        </div>
+        <br> <br>
+        <h3>SYMPTOMS</h3>
+        <div class="box2">
+            <div class="para2">
+                Signs and symptoms of mental illness can vary, depending on the disorder, circumstances and other
+                factors. Mental illness symptoms can affect emotions, thoughts and behaviors.
+                Examples of signs and symptoms include:
+                <ul>
+                    <li>Feeling sad or down</li>
+                    <li>Withdrawal from friends and activities</li>
+                    <li>Significant tiredness, low energy or problems sleeping</li>
+                    <li>Detachment from reality (delusions), paranoia or hallucinations</li>
+                    <li>Inability to cope with daily problems or stress</li>
+                    <li>Trouble understanding and relating to situations and to people</li>
+                    <li>Problems with alcohol or drug use</li>
+                    <li>Major changes in eating habits</li>
+                    <li>Excessive anger, hostility or violence</li>
+                    <li>Suicidal thinking</li>
+                    <li>Confused thinking or reduced ability to concentrate</li>
+                    <li>Excessive fears or worries, or extreme feelings of guilt</li>
+                    <li>Extreme mood changes of highs and lows</li>
+                    Sometimes symptoms of a mental health disorder appear as physical problems, such as stomach pain,
+                    backpain,headaches, or other unexplained aches and pains.
+                </ul>
+
+
+                <img src="https://cdn-icons-png.flaticon.com/512/5483/5483442.png" alt="symptoms" width="300px" height="270px"><br>
+
+            </div>
+        </div>
+        <br> <br> <br>
+        <div class="para3">
+            <h3>WHEN TO SEE A DOCTOR</h3>
+            <p>If you have any signs or symptoms of a mental illness, see your primary care provider or a mental health
+                professional. Most mental illnesses don't improve on their own, and if untreated, a mental illness may
+                get
+                worse
+                over time and cause serious problems.</p>
+            <img src="{{ url_for('static', filename ='img/mental-health10.png') }}" width="230px" height="200px">
+        </div>
+        <br> <br> <br>
+        <div class="para4">
+            <h3>IF YOU HAVE SUICIDAL THOUGHTS</h3>
+            <p>Suicidal thoughts and behavior are common with some mental illnesses. If you think you may hurt yourself
+                or
+                attempt suicide, get help right away:</p>
+            <li>Call 911 or your local emergency number immediately.</li>
+            <li>Call your mental health specialist.</li>
+            <li>Call a suicide hotline number.</li>
+            <li>Seek help from your primary care provider.</li>
+            <li>Reach out to a close friend or loved one.</li>
+            <li>Contact a minister, spiritual leader or someone else in your faith community.</li>
+            <p>Suicidal thinking doesn't get better on its own — so get help.</p><br>
+            <img src="{{ url_for('static', filename ='img/mental-health.png') }}" alt="mental-health" width="290px" height="240px">
+
+        </div>
+        <br>
+        <div class="para5">
+            <h3>HELPING A LOVED ONE</h3>
+            <br>
+            <p>If your loved one shows signs of mental illness, have an open and honest discussion with him or her about
+                your
+                concerns. You may not be able to force someone to get professional care, but you can offer encouragement
+                and
+                support. You can also help your loved one find a qualified mental health professional and make an
+                appointment.
+                You may even be able to go along to the appointment.</p>
+            <p>If your loved one has done self-harm or is considering doing so, take the person to the hospital or call
+                for
+                emergency help.</p>
+            <img src="{{ url_for('static', filename ='img/mental-health(2).png') }}" alt="mental-health(2)" width="270px" height="220px">
+            <br>
+        </div>
+        <br><br>
+        <div class="para6">
+            <h3>CAUSES</h3> <br>
+            <p>Mental illnesses, in general, are thought to be caused by a variety of genetic and environmental factors:
+            </p>
+
+            <li><strong>Inherited traits:</strong> Mental illness is more common in people whose blood relatives also
+                have a
+                mental illness. Certain
+                genes may increase your risk of developing a mental illness, and your life situation may trigger it.
+            </li>
+            <li><strong>Environmental exposures before birth:</strong> Exposure to environmental stressors, inflammatory
+                conditions, toxins, alcohol
+                or drugs while in the womb can sometimes be linked to mental illness.</li>
+            <li><strong>Brain chemistry:</strong> Neurotransmitters are naturally occurring brain chemicals that carry
+                signals
+                to other parts of your
+                brain and body. When the neural networks involving these chemicals are impaired, the function of nerve
+                receptors
+                and
+                nerve systems change, leading to depression and other emotional disorders.</li>
+            <img src="{{ url_for('static', filename ='img/mhf.png') }}" alt="mhf">
+        </div>
+        </div>
+        <br> <br><br> <br> <br> <br>
+        <div class="para7">
+            <h3>RISK FACTORS</h3> <br>
+            <p>Certain factors may increase your risk of developing a mental illness, including:</p>
+            <ul>
+                <li>A history of mental illness in a blood relative, such as a parent or sibling</li>
+                <li>Stressful life situations, such as financial problems, a loved one's death or a divorce</li>
+                <li>An ongoing (chronic) medical condition, such as diabetes</li>
+                <li>Brain damage as a result of a serious injury (traumatic brain injury), such as a violent blow to the
+                    head
+                </li>
+                <li>Traumatic experiences, such as military combat or assault</li>
+                <li>Use of alcohol or recreational drugs</li>
+                <li>A childhood history of abuse or neglect</li>
+                <li>Few friends or few healthy relationships</li>
+                <li>A previous mental illness</li>
+            </ul>
+            <img src="{{ url_for('static', filename ='img/mhlys.png') }}" alt="mhlys">
+        </div> 
+        <br>
+        <div class="para8">
+            <p>Mental illness is common. About 1 in 5 adults has a mental illness in any given year. Mental illness can
+                begin at
+                any age, from childhood through later adult years, but most cases begin earlier in life.</p>
+
+            <p>The effects of mental illness can be temporary or long lasting. You also can have more than one mental
+                health
+                disorder at the same time. For example, you may have depression and a substance use disorder.</p>
+
+        </div>
+        <br><br>
+        <div class="para9">
+            <h3>COMPLICATION</h3> <br>
+            <p>Mental illness is a leading cause of disability. Untreated mental illness can cause severe emotional,
+                behavioral
+                and
+                physical health problems. Complications sometimes linked to mental illness include:</p>
+            <li>Unhappiness and decreased enjoyment of life</li>
+            <li>Family conflicts</li>
+            <li>Relationship difficulties</li>
+            <li>Social isolation</li>
+            <li> Problems with tobacco, alcohol and other drugs</li>
+            <li> Missed work or school, or other problems related to work or school</li>
+            <li> Legal and financial problems</li>
+            <li>Poverty and homelessness</li>
+            <li>Self-harm and harm to others, including suicide or homicide</li>
+            <li>Weakened immune system, so your body has a hard time resisting infections</li>
+            <li> Heart disease and other medical conditions</li>
+            <img src="{{ url_for('static', filename ='img/cb.png') }}" alt="cb">
+        </div> <br><br> <br>
+        <div class="para10">
+            <h3>PREVENTION</h3> <br>
+            <p class="inpara4">There's no sure way to prevent mental illness. However, if you have a mental illness, taking steps to
+                control
+                stress, to increase your resilience and to boost low self-esteem may help keep your symptoms under
+                control.
+                Follow
+                these steps:</p>
+
+
+            <li><strong>Pay attention to warning signs:</strong> Work with your doctor or therapist to learn what might
+                trigger
+                your symptoms. Make a
+                plan so that you know what to do if symptoms return. Contact your doctor or therapist if you notice any
+                changes
+                in
+                symptoms or how you feel. Consider involving family members or friends to watch for warning signs.
+            <li><strong>Get routine medical care:</strong> Don't neglect checkups or skip visits to your primary care
+                provider,
+                especially if you
+                aren't feeling well. You may have a new health problem that needs to be treated, or you may be
+                experiencing
+                side
+                effects of medication.</li>
+            <li><strong>Get help when you need it:</strong> Mental health conditions can be harder to treat if you wait
+                until
+                symptoms get bad.
+                Long-term maintenance treatment also may help prevent a relapse of symptoms.
+            <li><strong>Take good care of yourself.</strong> Sufficient sleep, healthy eating and regular physical
+                activity
+                are
+                important. Try to
+                maintain a regular schedule. Talk to your primary care provider if you have trouble sleeping or if you
+                have
+                questions about diet and physical activity.</li>
+            <img src="{{ url_for('static', filename ='img/prevention.png') }}" alt="prevention">
+                
+        </div>
+    </main>
+
+    <a href="taketest.html" style="font-size: 26px;
+    position: relative;
+    top: -121px;
+    left: 350px;">To take the result and know your mental state better click here</a>
+    
+    <footer class="footer">
+        <p>Copyright &copy;</p>
+
+    </footer>
+    <q id="time"></q>
+    <script>
+        function time() {
+            time = new Date()
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(time, 1000)
+    </script>
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa',cursive;
+
+    font-size: 18px;
+    /* font-weight: ; */
+    color: #513131;
+}
+body{
+    background-color: #ffe9fd;
+}
+
+ h3{
+    color:#e018ae;
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    font-family: 'Poppins',;
+    /* position: relative;
+    /* left: 700px;
+    bottom: 30px; */ 
+    font-size: 24px;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+.logo{
+    display: flex;
+   width: 20px;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 3vh;
+    z-index: 10000;
+}
+nav img{
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px black;
+    position: relative;
+    top: 10px;
+}
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+.navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navlinks ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(231, 13, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.box1{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.box1 img{
+    position: relative;
+    top: 70px;
+}
+.para1{
+    padding-left: 10%;
+    /*! text-align: left; */
+    
+    text-align: justify;
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px;
+    height: 373px;
+}
+.para2{
+    padding: 0px 50px;
+    /*! text-align: left; */
+    text-align: justify;
+    height: 462px;
+}
+.para2 img{
+    position: relative;
+    top: -340px;
+    border-radius: 27px;
+    left: 700px;
+}
+.box2 ul{
+    padding-left: 40px;
+    list-style: square;
+}
+.para3 {
+    position: relative;
+    top:0px;
+    padding: 14px 50px;
+    left: 0px;
+    height: 63px;
+}
+.para3 img{
+    position: relative;
+    top: -200px;
+    left: -20px;
+    margin: 14px;
+}
+.para3 h3{
+    position: relative;
+    left: 100px;
+}
+.para3 p{
+    position: relative;
+    left:100px;
+    text-align: justify;
+    padding: 0px 150px;
+    
+    margin: 26px;
+}
+.para4 {
+    position: relative;
+    top: 0px;
+    padding: 20px 100px;
+    height: 360px;
+}
+.para4 img{
+    position: relative;
+    top: -220px;
+    left: 700px;
+    margin: -15px;
+}
+.para4 h3{
+    margin: 28px;
+}
+.para5{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 226px;
+}
+.para5 p{
+    margin: 1px 100px 7px 130px;
+    position:relative ;
+    left: 0px;
+    padding: 0px 0px 0px 325px;
+    text-align: justify;
+}
+.para5 img{
+    position: relative;
+    top:-217px;
+    left: 130px;
+}
+.para5 h3{
+    position: relative;
+    left: 150px;
+}
+.para6 {
+    margin: 33px 401px 0px 0px;
+    position:relative ;
+    left: 0px;
+    padding: 6px 91px 24px 100px;
+    text-align: justify;
+
+    height: 285px;
+}
+.para6 img{
+    position:relative;
+    height: 263px;
+    top:-273px;
+    left: 800px;
+}
+.para7{
+    position: relative;
+    text-align: justify;
+    margin:0px 0px 0px 485px;
+    padding: 0px 50px 0px 17px;
+    height: 333px;
+}
+    .para7 img{
+        position: relative;
+        left:-350px;
+        top:-288px;
+        height: 290px;
+    }
+
+    .para8 {
+        position:relative ;
+        padding:0px 0px 0px 154px;
+        margin: 0px 184px 15px 49px;
+    }
+    .para9{
+        position:relative ;
+        padding:0px 0px 0px 1px;
+        margin: 0px 184px 15px 49px;
+        height: 360px;
+    }
+    
+    .para9 img{
+        position: relative;
+        height: 200px;
+        top: -261px;
+        left: 800px;
+    }
+.para10{
+    position:relative ;
+    padding:0px 0px 0px 150px;
+    margin: 0px 100px 15px 200px;
+    text-align: justify;
+}
+.para10 img{
+    position: relative;
+    height: 200px;
+    top: -330px;
+    left: -300px;
+}
+.inpara4{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    border: 2px ;
+}
+#time{
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+}
+</style>
